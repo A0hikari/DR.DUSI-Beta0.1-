@@ -1,0 +1,220 @@
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: rgb(190, 235, 235);
+    
+
+    .nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    }
+
+    .navbar-buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 30px;
+    }
+
+    .btn{
+        display: flex;
+        background-color: #ff7b00;
+        border-radius: 50px;
+        color: #ffffff;
+        height: 35px;
+        font-size: 20px;
+    }
+
+.Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 255, 255);
+    border-radius: 20px;
+    margin-top: 50px;
+    height: 100px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+    label {
+    display: inline-block;
+    width: 150px;
+
+    }
+    input[type="range"] {
+    width: 300px;
+
+    }
+    .result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: green;
+    }
+
+     /* ปิดการใช้งานปุ่ม */
+    #submitBtn:disabled {
+        background-color: #c4c4c4;
+        cursor: not-allowed;
+    }
+
+    .Mslide {
+        background-color: #d4fceb;
+        border-radius: 20px;
+        padding: 10px;
+        margin-top: 50px;
+        margin-left: 440px;
+        width: 1000px;
+    }
+
+    .slider-container {
+        margin: 40px;
+        text-align: center;
+    }
+    
+    .slider-label {
+        font-size: 30px;
+        margin-right: 10px;
+        width: 30%;
+    }
+    
+    .slider {
+        -webkit-appearance: none; /* Chrome/Safari */
+        width: 500; /* กำหนดความกว้างของ slider */
+        height: 30px; /* กำหนดความสูง */
+        border-radius: 10px; /* มุมโค้ง */
+        background: #ddd; /* สีพื้นหลังเมื่อ slider ไม่ถูกใช้ */
+        outline: none; /* ไม่มีเส้นขอบ */
+        transition: background-color .3s; /* การเปลี่ยนสีพื้นหลัง */
+    }
+    
+    .slider:hover {
+        background: #ffffff; /* สีพื้นหลังเมื่อเลื่อนเมาส์ไปที่ slider */
+    }
+    
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none; /* Chrome/Safari */
+        appearance: none;
+        width: 35px; /* ขนาดของ thumb */
+        height: 35px; /* ขนาดของ thumb */
+        border-radius: 50%; /* ทำให้ thumb เป็นวงกลม */
+        background: #000000; /* สี thumb */
+        cursor: pointer; /* เคอร์เซอร์เมื่อ hover */
+    }
+    .range-value {
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffffff; /* สีตัวเลข */
+    }
+
+    button {
+        padding: 10px 15px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+    
+    /* สไตล์สำหรับหน้าต่าง modal */
+.modal {
+    display: none; /* เริ่มต้นซ่อนไว้ */
+    position: fixed; /* ทำให้หน้าต่างป็อปอัพอยู่กลางหน้าจอ */
+    z-index: 999; /* ให้อยู่ด้านบนสุด */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* พื้นหลังสีดำโปร่งแสง */
+}
+
+/* สไตล์สำหรับเนื้อหาภายใน modal */
+.modal-content {
+    background-color: rgb(118, 180, 165);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px; /* กำหนดขนาดสูงสุดของ modal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+    position: absolute; /* ใช้ position absolute */
+    top: 50%; /* ย้ายขึ้นจากขอบบน 50% */
+    left: 50%; /* ย้ายจากขอบซ้าย 50% */
+    transform: translate(-50%, -50%); /* ย้ายตัวเองกลับมาให้ตรงกลาง */
+}
+
+/* สไตล์สำหรับปุ่มปิด modal */
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #ff0000;
+    font-size: 80px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-content .close:hover,
+.modal-content .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* สไตล์ของข้อความและส่วนต่าง ๆ ภายใน modal */
+#modalResult {
+    font-size: 30px; /* ขนาดตัวอักษรใหญ่ขึ้น */
+    line-height: 1.6;
+    color: #333;
+    margin-top: 10px;
+    text-align: center; /* จัดตัวอักษรให้อยู่กลาง */
+}
+
+h2 {
+    font-family: 'Prompt', sans-serif;
+    font-size: 40px; /* ขนาดตัวอักษรใหญ่ขึ้น */
+    color: #000000;
+    margin-bottom: 15px;
+    text-align: center; /* จัดตัวอักษรให้อยู่กลาง */
+}
+
+
+button:disabled {
+    background-color: rgb(255, 255, 255);
+    cursor: not-allowed;
+}
+
+#submitBtn {
+    display: flex;
+    background-color: #4CAF50; 
+    color: #ffffff; 
+    border: none; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none;
+    font-size: 30px; 
+    margin-left: 840px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    cursor: pointer; 
+    border-radius: 8px; 
+    transition: background-color 0.3s ease; 
+}
+
+#submitBtn:hover {
+    background-color: #45a049;
+}
+
+#submitBtn:disabled {
+    background-color: rgb(255, 0, 0);
+    cursor: not-allowed;
+}
+}

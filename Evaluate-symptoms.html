@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบประเมินอาการเบื้องต้น</title>
+    <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=UxVnBK">
+    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=UxVnBK" type="text/css">
+    <link rel="stylesheet" href="Evaluate-symptoms.css">
+    <script src="Evaluate-symptoms.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="menu menu1 cid-tJGsCG1vVL" id="menu01-1">
+        <nav class="nav">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="Home.html">
+                        <img src="assets/images/dr.dusi-removebg-preview-6.png" alt="Mobirise Website Builder" style="height: 3rem;">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown">
+                        <li class="nav-item">
+                            <a class="nav-link link text-success display-4" href="index.html#contacts3-1"></a>
+                        </li>
+                    </ul>
+                    <div class="navbar-buttons">
+                        <a class="btn" href="Home.html#contacts02-3">โรงพยาบาลใกล้คุณ</a>
+                        <a class="btn" href="Home.html#contacts02-4">ร้านยาคุณภาพใกล้คุณ</a>
+                        <a class="btn" href="Home.html#list01-8">วิธีดูแลตัวเอง</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="Header">
+            <h1>แบบประเมินอาการเบื้องต้น</h1>
+        </div>
+        <div class="Mslide">
+        <div class="slider-container">
+            <label class="slider-label">ปวดหัว:</label>
+            <input type="range" id="headache" class="slider" min="0" max="10" value="0" oninput="updateValue(this, 'headacheValue')">
+            <span id="headacheValue" class="range-value">0</span>/10
+        </div>
+
+        <div class="slider-container">
+            <label class="slider-label">อาการเหนื่อย/เพลีย:</label>
+            <input type="range" id="Tiredness" class="slider" min="0" max="10" value="0" oninput="updateValue(this, 'TirednessValue')">
+            <span id="TirednessValue" class="range-value">0</span>/10
+        </div>
+
+        <div class="slider-container">
+            <label class="slider-label">คลื่นไส้:</label>
+            <input type="range" id="squeamish" class="slider" min="0" max="10" value="0" oninput="updateValue(this, 'squeamishValue')">
+            <span id="squeamishValue" class="range-value">0</span>/10
+        </div>
+
+        <div class="slider-container">
+            <label class="slider-label">วิตกกังวล:</label>
+            <input type="range" id="Anxious" class="slider" min="0" max="10" value="0" oninput="updateValue(this, 'AnxiousValue')">
+            <span id="AnxiousValue" class="range-value">0</span>/10
+        </div>
+
+        <div class="slider-container">
+            <label class="slider-label">ง่วงซึม:</label>
+            <input type="range" id="Drowsy" class="slider" min="0" max="10" value="0" oninput="updateValue(this, 'DrowsyValue')">
+            <span id="DrowsyValue" class="range-value">0</span>/10
+        </div>
+
+        <div class="slider-container">
+            <label class="slider-label">เบื่ออาหาร:</label>
+            <input type="range" id="Lossofappetite" class="slider" min="0" max="10" value="0" oninput="updateValue(this, 'LossofappetiteValue')">
+            <span id="LossofappetiteValue" class="range-value">0</span>/10
+        </div>
+
+        <div class="slider-container">
+            <label class="slider-label">ซึมเศร้า:</label>
+            <input type="range" id="Depressed" class="slider" min="0" max="10" value="0" oninput="updateValue(this, 'DepressedValue')">
+            <span id="DepressedValue" class="range-value">0</span>/10
+        </div>
+
+        <div class="slider-container">
+            <label class="slider-label">ไอ:</label>
+            <input type="range" id="cough" class="slider" min="0" max="10" value="0" oninput="updateValue(this, 'coughValue')">
+            <span id="coughValue" class="range-value">0</span>/10
+        </div>
+
+        <div class="slider-container">
+            <label class="slider-label">ปวดร่างกาย:</label>
+            <input type="range" id="bodyAche" class="slider" min="0" max="10" value="0" oninput="updateValue(this, 'bodyAcheValue')">
+            <span id="bodyAcheValue" class="range-value">0</span>/10
+        </div>
+    </div>
+
+    <button id="submitBtn" onclick="submitQuiz()" disabled>ส่งผลการประเมิน</button>
+
+
+        <!-- Modal -->
+<div id="myModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>ผลการประเมิน</h2>
+        <div id="modalResult"></div> <!-- ผลการประเมินจะแสดงที่นี่ -->
+    </div>
+</div>
+    </section>
+</body>
+</html>
